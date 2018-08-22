@@ -13,13 +13,18 @@
  *= require_tree .
  *= require_self
  */
+ * {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
 
- .body{
-    
- }
  a{
      text-decoration: none;
 
+ }
+ .col-12{
+     width: 100%;
  }
  a:hover{
      text-decoration: underline;
@@ -39,11 +44,15 @@
 .avatar{
     border: 2x solid blue
 }
-.nav-linav-bar__list--item{
+.list-items{
     list-style: none;
     display: inline;
-    border: 1px solid black;
+   
 }
+.repo-menu__list--item{
+    padding: 1rem;
+    font-family: 'Arial Narrow';
+} 
 
 .profile-name{
     color: #3c4146;
@@ -52,4 +61,21 @@
 }
 .profile-name__user{ 
     font-family: 'Arial Narrow', san-serif;
+}
+.container2{
+    overflow: auto;
+}
+.column-profile{
+    width: 20%;
+    float:left;
+}
+.column-repos__stats{
+    width:80%;
+    float:right;
+}
+.repo-item{
+    border: 1px solid black;
+    float:left;
+    width: 50%;
+    height: 100px;
 }
