@@ -1,0 +1,26 @@
+<div class="">
+    <div class="nav-bar">
+    <ul class ="nav-bar__list">
+       <% ["Pull requests", "Issues", "Markeplace", "Explore"].each do | item | %>
+            <li class="nav-bar__list--item"><%=item%></li>
+       <% end %>
+     </ul>
+    </div>
+
+    <div class="container2">
+        <section class="profile">
+        <%= image_tag(getValueFromKey("avatar_url"))%>
+        <h3 class="profile-name"><%=getValueFromKey("name")%></h3>
+        <h4 class="profile-name__user"><%=getValueFromKey("login")%></h4>
+        <address>
+            <%= getValueFromKey("location")%> <br>
+            <a><%= octicon "location" %>
+<%= getValueFromKey("email")%></a> <br>
+        </address>
+        </section>
+        <section class="repo-stats__container">
+
+        </section>
+    </div>
+</div>
+
