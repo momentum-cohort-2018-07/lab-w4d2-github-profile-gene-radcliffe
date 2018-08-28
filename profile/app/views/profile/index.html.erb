@@ -1,0 +1,39 @@
+<div class="">
+    <div class="nav-bar">
+    <ul class ="nav-bar__list">
+       <% ["Pull requests", "Issues", "Markeplace", "Explore"].each do | item | %>
+            <li class="nav-bar__list--item list-items"><%=item%></li>
+       <% end %>
+     </ul>
+    </div>
+    <div class="container2">
+        <div class="column-profile column">
+        <%= image_tag(getValueFromKey("avatar_url"), class:"col-12")%>
+        <h3 class="profile-name col-12"><%=getValueFromKey("name")%></h3>
+        <h4 class="profile-name__user col-12"><%=getValueFromKey("login")%></h4>
+        <address class="col-12">
+           <%= octicon "location" %> <%= getValueFromKey("location")%> <br>
+           <a><%= octicon "mail" %>g_radcliffe82@hotmail.com%></a> <br>
+        </address>
+        </div>
+        <div class="column-repos__stats column">
+            <section  class="repo-menu"> 
+                <ul class ="repo-menu__list">
+                <% ["Overview", "Repositories", "Stars", "Followers", "Following"].each do | item | %>
+                <li class="repo-menu__list--item list-items"><a><%=item%></a></li>
+                 <% end %>
+                </ul>
+             </section>
+             <section class="repos">
+                <%= @repos_data_array.each do |repo|%>
+                    <div class="repo-item">
+                    <p><%= repo["name"] %></p>
+                    <p><%= repo["description"] %></p>
+                    <p><%= repo["language"]%></p> 
+                    </div>
+                <% end%>
+             </section>
+        </div>
+    </div>
+</div>
+
